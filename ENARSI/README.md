@@ -1,86 +1,108 @@
-# CCNP
-ENCOR 350-401 | ENARSI 300-410
-
-# 350-401 ENCOR v1.1 Exam Topics
+# 300-410 ENARSI v1.1 Exam Topics
 ## Exam Description
-  > To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
-  > certification, you must pass the 350-401 ENCOR exam.  This exam tests your knowledge of:
+  > To earn your CCNP Enterprise certification you must pass the **350-401 ENCOR** exam and an eligible concentration exam of your choice,
+  > such as **300-401 ENARSI**.  Passing this exam also earns you the **Cisco Certified Specialist - Enterprise Advanced Infrastructure Implementation** certification.  
+  > You will be tested on your knowledge of
 
 <details>
-  <summary>1.0 Architecture 15%</summary>
+  <summary>1.0 Layer 3 Technologies 35%</summary>
 
-1.1 Explain the different design principles used in an enterprise network
-- *1.1.a High-level enterprise network design such as 2-tier, 3-tier, fabric, and cloud*
-- *1.1.b High availability techniques such as redundancy, FHRP, and SSO*
+1.1 Troubleshoot administrative distance (all routing protocols)
 
-1.2 Describe wireless network design principles
-- *1.2.a Wireless deployment models (centralized, distributed, controller-less, controller-based, cloud, remote branch)*
-- *1.2.b Location services in a WLAN design*
-- *1.2.c Client density*
+1.2 Troubleshoot route map for any routing protocol (attributes, tagging, filtering)
 
-1.3 Explain the working principles of the Cisco SD-WAN solution
-- *1.3.a SD-WAN control and data planes elements*
-- *1.3.b Benefits and limitations of SD-WAN solutions*
+1.3 Troubleshoot loop prevention mechanisms (filtering, tagging, split horizon, route poisoning)
 
-1.4 Explain the working principles of the Cisco SD-Access solution
-- *1.4.a SD-Access control and data planes elements*
-- *1.4.b Traditional campus interoperating with SD-Access*
+1.4 Troubleshoot redistribution between any routing protocols or routing sources
 
-1.5 Interpret wired and wireless QoS configurations
-- *1.5.a QoS components*
-- *1.5.b QoS policy*
+1.5 Troubleshoot manual and auto-summarization with any routing protocol
 
-1.6 Describe hardware and software switching mechanisms such as CEF, CAM, TCAM, FIB, RIB, and adjacency tables
+1.6 Configure and verify policy-based routing
+
+1.7 Configure and verify VRF-Lite
+
+1.8 Describe Bidirectional Forwarding Detection
+
+1.9 Troubleshoot EIGRP (classic and named mode; VRF and global)
++ 1.9.a Address families (IPv4, IPv6)
+
++ 1.9.b Neighbor relationship and authentication
+
++ 1.9.c Loop-free path selections (RD, FD, FC, successor, feasible successor, stuck in active)
+
++ 1.9.d Stubs
+
++ 1.9.e Load balancing (equal and unequal cost)
+
++ 1.9.f Metrics
+
+1.10 Troubleshoot OSPF (v2/v3)
++ 1.10.a Address families (IPv4, IPv6)
+
++ 1.10.b Neighbor relationship and authentication
+
++ 1.10.c Network types, area types, and router types
+
++ 1.10.c.i Point-to-point, multipoint, broadcast, nonbroadcast
+
++ 1.10.c.ii Area type: backbone, normal, transit, stub, NSSA, totally stub
+
++ 1.10.c.iii Internal router, backbone router, ABR, ASBR
+
++ 1.10.c.iv Virtual link
+
++ 1.10.d Path preference
+
+1.11 Troubleshoot BGP (Internal and External, unicast, and VRF-Lite)
++ 1.11.a Address families (IPv4, IPv6)
+
++ 1.11.b Neighbor relationship and authentication (next-hop, mulithop, 4-byte AS, private AS, route refresh, synchronization, operation, peer group, states and timers)
+
++ 1.11.c Path preference (attributes and best-path)
+
++ 1.11.d Route reflector (excluding multiple route reflectors, confederations, dynamic peer)
+
++ 1.11.e Policies (inbound/outbound filtering, path manipulation)
 </details>
 
 ---
 
 <details>
-  <summary>2.0 Virtualization 10%</summary>
+  <summary>2.0 VPN Technologies 20%</summary>
 
-  2.1 Describe device virtualization technologies
-- *2.1.a Hypervisor type 1 and 2*
-- *2.1.b Virtual machine*
-- *2.1.c Virtual switching*
+2.1 Describe MPLS operations (LSR, LDP, label switching, LSP)
 
-2.2 Configure and verify data path virtualization technologies
-- *2.2.a VRF*
-- *2.2.b GRE and IPsec tunneling*
+2.2 Describe MPLS Layer 3 VPN
 
-2.3 Describe network virtualization concepts
-- *2.3.a LISP*
-- *2.3.b VXLAN*
+2.3 Configure and verify DMVPN (single hub)
+  + 2.3.a GRE/mGRE
+
+  + 2.3.b NHRP
+
+  + 2.3.c IPsec
+
+  + 2.3.d Dynamic neighbor
+
+  + 2.3.e Spoke-to-spoke
 </details>
 
 ---
 
 <details>
-  <summary>3.0 Infrastructure 30%</summary>
+  <summary>3.0 Infrastructure Security 20%</summary>
 
-3.1 Layer 2
-- *3.1.a Troubleshoot static and dynamic 802.1q trunking protocols*
-- *3.1.b Troubleshoot static and dynamic EtherChannels*
-- *3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard*
+3.1 Troubleshoot device security using IOS AAA (TACACS+, RADIUS, local database)
 
-3.2 Layer 3
-- *3.2.a Compare routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)*
-- *3.2.b Configure simple OSPFv2/v3 environments, including multiple normal areas, summarization, and filtering (neighbor adjacency, point-to-point, and broadcast network types, and passive-interface)*
-- *3.2.c Configure and verify eBGP between directly connected neighbors (best path selection algorithm and neighbor relationships)*
-- *3.2.d Describe policy-based routing*
+3.2 Troubleshoot router security features
+  + 3.2.a IPv4 access control lists (standard, extended, time-based)
 
-3.3 Wireless
-- *3.3.a Describe Layer 1 concepts, such as RF power, RSSI, SNR, interference, noise, bands, channels, and wireless client devices capabilities*
-- *3.3.b Describe AP modes and antenna types*
-- *3.3.c Describe access point discovery and join process (discovery algorithms, WLC selection process)*
-- *3.3.d Describe the main principles and use cases for Layer 2 and Layer 3 roaming*
-- *3.3.e Troubleshoot WLAN configuration and wireless client connectivity issues using GUI only*
-- *3.3.f Describe wireless segmentation with groups, profiles, and tags*
+  + 3.2.b IPv6 traffic filter
 
-3.4 IP Services
-- *3.4.a Interpret network time protocol configurations such as NTP and PTP*
-- *3.4.b Configure NAT/PAT*
-- *3.4.c Configure first hop redundancy protocols, such as HSRP, VRRP*
-- *3.4.d Describe multicast protocols, such as RPF check, PIM and IGMP v2/v3*
+  + 3.2.c Unicast reverse path forwarding (uRPF)
+
+3.3 Troubleshoot control plane policing (CoPP) (Telnet, SSH, HTTP(S), SNMP, EIGRP, OSPF, BGP)
+
+3.4 Describe IPv6 First Hop security features (RA guard, DHCP guard, binding table, ND inspection/snooping, source guard)
 </details>
 
 ---
@@ -90,65 +112,22 @@ ENCOR 350-401 | ENARSI 300-410
     4.0 Network Assurance 10%    
   </summary>
 
-4.1 Diagnose network problems using tools such as debugs, conditional debugs, traceroute, ping, SNMP, and syslog
+4.1 Troubleshoot device management
+  + 4.1.a Console and VTY
+  + 4.1.b Telnet, HTTP, HTTPS, SSH, SCP
+  + 4.1.c (T)FTP
 
-4.2 Configure and verify Flexible NetFlow
+4.2 Troubleshoot SNMP (v2c, v3)
 
-4.3 Configure SPAN/RSPAN/ERSPAN
+4.3 Troubleshoot network problems using logging (local, syslog, debugs, conditional debugs, timestamps)
 
-4.4 Configure and verify IPSLA
+4.4 Troubleshoot IPv4 and IPv6 DHCP (DHCP client, IOS DHCP server, DHCP relay, DHCP options)
 
-4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
+4.5 Troubleshoot network performance issues using IP SLA (jitter, tracking objects, delay, connectivity)
 
-4.6 Configure and verify NETCONF and RESTCONF
-</details>
+4.6 Troubleshoot NetFlow (v5, v9, flexible NetFlow)
 
----
-
-<details>
-  <summary>5.0 Security 20%</summary>
-
-5.1 Configure and verify device access control
-- *5.1.a Lines and local user authentication*
-- *5.1.b Authentication and authorization using AAA*
-
-5.2 Configure and verify infrastructure security features
-- *5.2.a ACLs*
-- *5.2.b CoPP*
-- *5.3 Describe REST API security*
-
-5.4 Configure and verify wireless security features
-- *5.4.a 802.1X*
-- *5.4.b WebAuth*
-- *5.4.c PSK*
-- *5.4.d EAPOL (4-way handshake)*
-
-5.5 Describe the components of network security design
-- *5.5.a Threat defense*
-- *5.5.b Endpoint security*
-- *5.5.c Next-generation firewall*
-- *5.5.d TrustSec and MACsec*
-- *5.5.e Network access control with 802.1X, MAB, and WebAuth*
-</details>
-
----
-
-<details>
-	<summary>6.0 Automation 15%</summary>
-
-6.1	Interpret basic Python components and scripts
-
-6.2	Construct valid JSON encoded file
-
-6.3	Describe the high-level principles and benefits of a data modeling language, such as YANG			
-
-6.4	Describe APIs for Cisco DNA Center and vManage			
-
-6.5	Interpret REST API response codes and results in payload using Cisco DNA Center and RESTCONF			
-
-6.6	Construct EEM applet to automate configuration, troubleshooting, or data collection			
-
-6.7	Compare agent vs. agent less orchestration tools, such as Chef, Puppet, Ansible, and SaltStack
+4.7 Troubleshoot network problems using Cisco DNA Center assurance (connectivity, monitoring, device health, network health)
 </details>
 
 ---
@@ -163,5 +142,5 @@ ENCOR 350-401 | ENARSI 300-410
 
 ---
 
-#### ENCOR Study Resources
+#### ENARSI Study Resources
 [Architecture](architecture/README.md) | [Virtualization](virtualization/README.md) | [Infrastructure](infrastructure/README.md) | [Network Assurance](network_assurance/README.md) | [Security](security/README.md) | [Automation](automation/README.md)
