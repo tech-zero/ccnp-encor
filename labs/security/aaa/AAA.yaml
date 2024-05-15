@@ -1,0 +1,138 @@
+lab:
+  description: AAA Lab - Copyright 2023, Kevin Wallace Training, LLC
+  notes: |-
+    ## Lab Tasks:
+    - Enable AAA globally
+    - Create local user with name test, password cisco
+    - Configure both TACACS+ server instances, named TACACS1 and TACACS2
+    - Secret key set to security for both servers
+    - Create TACACS+ server group named T-GROUP and add both servers
+    - Configure AAA authentication using default method list
+       - TACACS+ server group should be primary method, followed by local login, and enable password
+    - Enable authorization requirement for EXEC shell
+       - TACACS+ server group should be primary method, followed by local login
+    - Test by logging out/in to the console
+  title: AAA
+  version: 0.2.0
+links: []
+nodes:
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 2706 bytes
+      !
+      ! Last configuration change at 21:42:22 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname R1
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      no logging console
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      ip cef
+      no ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      !
+      redundancy
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface GigabitEthernet0/0
+       ip address 10.255.0.70 255.255.0.0
+       shutdown
+       duplex auto
+       speed auto
+       media-type rj45
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       login
+       transport input none
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: 50
+    y: 50
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+annotations: []
