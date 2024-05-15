@@ -1,7 +1,9 @@
 # 300-410 ENARSI v1.1 Exam Topics
 ## Exam Description
-  > To earn your CCNP Enterprise certification you must pass the **350-401 ENCOR** exam and an eligible concentration exam of your choice,
-  > such as **300-401 ENARSI**.  Passing this exam also earns you the **Cisco Certified Specialist - Enterprise Advanced Infrastructure Implementation** certification.  
+  > To earn your CCNP Enterprise certification you must pass the **350-401 ENCOR**
+  > exam and an eligible concentration exam of your choice, such as **300-401 ENARSI**.  
+  > Passing this exam also earns you the **Cisco Certified Specialist - Enterprise**
+  > **Advanced Infrastructure Implementation** certification.  
   > You will be tested on your knowledge of
 
 <details>
