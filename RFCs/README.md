@@ -1,5 +1,4 @@
-# RFC Study ENCOR & ENARSI OSGs
-## 350-401 ENCOR (v1.1): Implementing Cisco Enterprise Network Core Technologies
+## RFCs covered in 350-401 ENCOR (v1.1)
 ### EIGRP 
 [RFC 7868 - Cisco's Enhanced Interior Gateway Routing Protocol (EIGRP), May 2016.](https://datatracker.ietf.org/doc/rfc7868)
 
