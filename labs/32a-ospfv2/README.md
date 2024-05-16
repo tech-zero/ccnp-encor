@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [router configs](./ospfv2.yaml)
+#️⃣ [lab configs](./ospfv2.yaml)
 
 ---
 
