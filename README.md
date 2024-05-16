@@ -1,4 +1,4 @@
-## CCNP
+## Blueprint
 #### 350-401 ENCOR v1.1 Exam Topics
 #### Exam Description
   > To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
