@@ -6,9 +6,13 @@
 [RFC 1583 - OSPFv2, March 1994](https://datatracker.ietf.org/doc/rfc1583)
 
 [RFC 2328 - OSPFv2, April 1998.](https://datatracker.ietf.org/doc/rfc2328)
+
 [RFC 3509 - Alternative Implementations of OSPF Area Border Router, April 2003.](https://datatracker.ietf.org/doc/html/rfc3509)
+
 [RFC 5340 - OSPFv3, July 2008.](https://datatracker.ietf.org/doc/rfc5340)
+
 [RFC 5838 - Support of Address Families in OSPFv3, April 2010.](https://datatracker.ietf.org/doc/rfc5838)
+
 [RFC 5883 - Bidirectional Forwarding Detection (BFD) for Multihop Paths, June 2010.](https://datatracker.ietf.org/doc/rfc5883)
 
 ---
