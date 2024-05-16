@@ -4,16 +4,19 @@
 
 ---
 
-### Rapid PVST+ Lab
+### OSPFv2 Lab
 
-![Lab topology](https://github.com/tech-zero/encor-study/blob/main/images/pvst+.png?raw=true)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/ospfv2.png)
 
-#### Lab Tasks:
-- Configure Rapid PVST+ on all switches
-- VLANs 100, 300 Primary Root = SW1, Secondary Root = SW3
-- VLAN 200 Primary Root = SW3, Secondary Root = SW1
-- Configure Gig 0/3 as an edge port type
+### Lab Tasks:
+- Configure OSPFv2 for R3, R4, and R5
+- All R3 interfaces are in Area 1
+- R4's Gig 0/1 interface is in Area 1
+- R4's Gig 0/2 interface is in Area 0
+- All R5 interfaces are in Area 0
+- R1 and R2 are already configured for EIGRP and/or OSPF
+- All routers have loopback IP addresses set (e.g., R1 = 1.1.1.1)
 
 ---
 
-:white_check_mark: [CLI reference](solution/README.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32a-ospfv2.md)
