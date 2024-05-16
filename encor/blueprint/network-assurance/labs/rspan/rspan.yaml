@@ -1,0 +1,1421 @@
+lab:
+  description: RSPAN Lab - Copyright 2023, Kevin Wallace Training, LLC
+  notes: |-
+    ## Lab Tasks
+    - Setup Local SPAN on SW1
+    - Create RSPAN VLAN 200
+    - Setup RSPAN on SW2
+    - Validate with "show" commands
+  title: RSPAN
+  version: 0.2.0
+links:
+  - id: l0
+    n1: n2
+    n2: n0
+    i1: i2
+    i2: i2
+    label: PC1-GigabitEthernet0/1<->SW1-GigabitEthernet0/1
+  - id: l1
+    n1: n3
+    n2: n0
+    i1: i2
+    i2: i3
+    label: PC2-GigabitEthernet0/1<->SW1-GigabitEthernet0/2
+  - id: l2
+    n1: n0
+    n2: n1
+    i1: i6
+    i2: i1
+    label: SW1-GigabitEthernet3/3<->Analyzer-eth1
+  - id: l3
+    n1: n0
+    n2: n6
+    i1: i5
+    i2: i5
+    label: SW1-GigabitEthernet3/0<->SW2-GigabitEthernet3/0
+  - id: l4
+    n1: n4
+    n2: n6
+    i1: i2
+    i2: i2
+    label: PC3-GigabitEthernet0/1<->SW2-GigabitEthernet0/1
+  - id: l5
+    n1: n6
+    n2: n7
+    i1: i3
+    i2: i2
+    label: SW2-GigabitEthernet0/2<->PC4-GigabitEthernet0/1
+  - id: l6
+    n1: n6
+    n2: n5
+    i1: i4
+    i2: i2
+    label: SW2-GigabitEthernet0/3<->R1-GigabitEthernet0/1
+nodes:
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 3482 bytes
+      !
+      ! Last configuration change at 21:26:44 UTC Sat Jul 8 2023
+      !
+      version 15.2
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      service compress-config
+      !
+      hostname SW1
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      !
+      username cisco privilege 15 secret 5 $1$t.I9$n0WWFapjPLO04ZF27tUJw1
+      no aaa new-model
+      !
+      !
+      !
+      !
+      !
+      vtp domain virl.lab
+      vtp mode transparent
+      !
+      !
+      !
+      no ip domain-lookup
+      ip cef
+      no ipv6 cef
+      !
+      !
+      !
+      spanning-tree mode pvst
+      spanning-tree extend system-id
+      !
+      !
+      vlan 2
+       name ank_vlan2
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       no ip address
+      !
+      interface GigabitEthernet0/0
+       description OOB management
+       no switchport
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.44 255.255.0.0
+       negotiation auto
+      !
+      interface GigabitEthernet0/1
+       description to PC1
+       switchport access vlan 2
+       switchport mode access
+       negotiation auto
+      !
+      interface GigabitEthernet0/2
+       description to PC2
+       switchport access vlan 2
+       switchport mode access
+       negotiation auto
+      !
+      interface GigabitEthernet0/3
+       description GigabitEthernet0/3
+       negotiation auto
+      !
+      interface GigabitEthernet1/0
+       negotiation auto
+      !
+      interface GigabitEthernet1/1
+       negotiation auto
+      !
+      ip forward-protocol nd
+      !
+      no ip http server
+      ip http secure-server
+      !
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      !
+      !
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+       logging synchronous
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    ram: null
+    tags: []
+    x: 57
+    y: 162
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet3/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet3/3
+        slot: 5
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      # converted cloud-config
+      hostname Analyzer
+      ifconfig eth1 up 10.0.0.5 netmask 255.255.128.0
+      route add -host 192.168.0.1 gw 10.0.0.2 dev eth1
+      route add -net 10.0.0.0/16 gw 10.0.0.2 dev eth1
+      route add -net 192.168.0.2/31 gw 10.0.0.2 dev eth1
+      route add -net 192.168.0.4/31 gw 10.0.0.2 dev eth1
+      route add -host 192.168.0.1 gw 10.0.0.1 dev eth1
+      route add -net 10.0.0.0/16 gw 10.0.0.1 dev eth1
+      route add -net 192.168.0.2/31 gw 10.0.0.1 dev eth1
+      route add -net 192.168.0.4/31 gw 10.0.0.1 dev eth1
+      route add -host 192.168.0.1 gw 10.0.0.3 dev eth1
+      route add -net 10.0.0.0/16 gw 10.0.0.3 dev eth1
+      route add -net 192.168.0.2/31 gw 10.0.0.3 dev eth1
+      route add -net 192.168.0.4/31 gw 10.0.0.3 dev eth1
+      route add -host 192.168.0.1 gw 10.0.0.4 dev eth1
+      route add -net 10.0.0.0/16 gw 10.0.0.4 dev eth1
+      route add -net 192.168.0.2/31 gw 10.0.0.4 dev eth1
+      route add -net 192.168.0.4/31 gw 10.0.0.4 dev eth1
+
+      # original cloud-config
+      # #cloud-config
+      # bootcmd:
+      # - ln -s -t /etc/rc.d /etc/rc.local
+      # hostname: Analyzer
+      # manage_etc_hosts: true
+      # runcmd:
+      # - systemctl start rc-local
+      # - sed -i '/^\s*PasswordAuthentication\s\+no/d' /etc/ssh/sshd_config
+      # - echo "UseDNS no" >> /etc/ssh/sshd_config
+      # - service ssh restart
+      # - service sshd restart
+      # users:
+      # - default
+      # - gecos: User configured by VIRL Configuration Engine 0.23.12
+      #   lock-passwd: false
+      #   name: cisco
+      #   plain-text-passwd: cisco
+      #   shell: /bin/bash
+      #   ssh-authorized-keys:
+      #   - VIRL-USER-SSH-PUBLIC-KEY
+      #   sudo: ALL=(ALL) ALL
+      # write_files:
+      # - path: /etc/systemd/system/dhclient@.service
+      #   content: |
+      #     [Unit]
+      #     Description=Run dhclient on %i interface
+      #     After=network.target
+      #     [Service]
+      #     Type=oneshot
+      #     ExecStart=/sbin/dhclient %i -nw -pf /var/run/dhclient.%i.pid -lf /var/lib/dhclient/dhclient.%i.lease
+      #     ExecStart=/sbin/dhclient %i -nw -pf /var/run/dhclient6.%i.pid -6 -S
+      #     RemainAfterExit=yes
+      #   owner: root:root
+      #   permissions: '0644'
+      # - path: /etc/rc.local
+      #   owner: root:root
+      #   permissions: '0755'
+      #   content: |-
+      #     #!/bin/sh
+      #     ifconfig eth1 up 10.0.0.5 netmask 255.255.128.0
+      #     route add -host 192.168.0.1 gw 10.0.0.2 dev eth1
+      #     route add -net 10.0.0.0/16 gw 10.0.0.2 dev eth1
+      #     route add -net 192.168.0.2/31 gw 10.0.0.2 dev eth1
+      #     route add -net 192.168.0.4/31 gw 10.0.0.2 dev eth1
+      #     route add -host 192.168.0.1 gw 10.0.0.1 dev eth1
+      #     route add -net 10.0.0.0/16 gw 10.0.0.1 dev eth1
+      #     route add -net 192.168.0.2/31 gw 10.0.0.1 dev eth1
+      #     route add -net 192.168.0.4/31 gw 10.0.0.1 dev eth1
+      #     route add -host 192.168.0.1 gw 10.0.0.3 dev eth1
+      #     route add -net 10.0.0.0/16 gw 10.0.0.3 dev eth1
+      #     route add -net 192.168.0.2/31 gw 10.0.0.3 dev eth1
+      #     route add -net 192.168.0.4/31 gw 10.0.0.3 dev eth1
+      #     route add -host 192.168.0.1 gw 10.0.0.4 dev eth1
+      #     route add -net 10.0.0.0/16 gw 10.0.0.4 dev eth1
+      #     route add -net 192.168.0.2/31 gw 10.0.0.4 dev eth1
+      #     route add -net 192.168.0.4/31 gw 10.0.0.4 dev eth1
+      #     exit 0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: Analyzer
+    node_definition: server
+    ram: null
+    tags: []
+    x: 59
+    y: -51
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+      - id: i1
+        label: eth1
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 4302 bytes
+      !
+      ! Last configuration change at 21:26:48 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname PC1
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      enable password cisco
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      no ip domain lookup
+      ip domain name virl.info
+      ip cef
+      ipv6 unicast-routing
+      ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      username cisco privilege 15 secret 9 $14$gY1H$rDb0zvWCpvA.wk$5oQQCx3kXEORCzj3wDNBqoh14sZFOhEJ1CuEgHRtvoI
+      !
+      redundancy
+      !
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       ip address 192.168.0.2 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+       description OOB Management
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.39 255.255.0.0
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/1
+       description to SW1
+       ip address 10.0.0.2 255.255.128.0
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      router ospf 1
+       passive-interface Loopback0
+       network 10.0.0.0 0.0.127.255 area 0
+       network 192.168.0.2 0.0.0.0 area 0
+      !
+      router bgp 1
+       bgp router-id 192.168.0.2
+       bgp log-neighbor-changes
+       neighbor 192.168.0.1 remote-as 1
+       neighbor 192.168.0.1 description iBGP peer R1
+       neighbor 192.168.0.1 update-source Loopback0
+       neighbor 192.168.0.3 remote-as 1
+       neighbor 192.168.0.3 description iBGP peer PC2
+       neighbor 192.168.0.3 update-source Loopback0
+       neighbor 192.168.0.4 remote-as 1
+       neighbor 192.168.0.4 description iBGP peer PC3
+       neighbor 192.168.0.4 update-source Loopback0
+       neighbor 192.168.0.5 remote-as 1
+       neighbor 192.168.0.5 description iBGP peer PC4
+       neighbor 192.168.0.5 update-source Loopback0
+       !
+       address-family ipv4
+        network 192.168.0.2 mask 255.255.255.255
+        neighbor 192.168.0.1 activate
+        neighbor 192.168.0.3 activate
+        neighbor 192.168.0.4 activate
+        neighbor 192.168.0.5 activate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      ip ssh server algorithm authentication password
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: PC1
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -161
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 4302 bytes
+      !
+      ! Last configuration change at 21:26:50 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname PC2
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      enable password cisco
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      no ip domain lookup
+      ip domain name virl.info
+      ip cef
+      ipv6 unicast-routing
+      ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      username cisco privilege 15 secret 9 $14$ZCec$Me2FB8EJ5J.tt.$LmWxvH6vBC9ATYc83KhcR7W4sHRQ9WI2kZOXOISNSMM
+      !
+      redundancy
+      !
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       ip address 192.168.0.3 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+       description OOB Management
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.40 255.255.0.0
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/1
+       description to SW1
+       ip address 10.0.0.3 255.255.128.0
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      router ospf 1
+       passive-interface Loopback0
+       network 10.0.0.0 0.0.127.255 area 0
+       network 192.168.0.3 0.0.0.0 area 0
+      !
+      router bgp 1
+       bgp router-id 192.168.0.3
+       bgp log-neighbor-changes
+       neighbor 192.168.0.1 remote-as 1
+       neighbor 192.168.0.1 description iBGP peer R1
+       neighbor 192.168.0.1 update-source Loopback0
+       neighbor 192.168.0.2 remote-as 1
+       neighbor 192.168.0.2 description iBGP peer PC1
+       neighbor 192.168.0.2 update-source Loopback0
+       neighbor 192.168.0.4 remote-as 1
+       neighbor 192.168.0.4 description iBGP peer PC3
+       neighbor 192.168.0.4 update-source Loopback0
+       neighbor 192.168.0.5 remote-as 1
+       neighbor 192.168.0.5 description iBGP peer PC4
+       neighbor 192.168.0.5 update-source Loopback0
+       !
+       address-family ipv4
+        network 192.168.0.3 mask 255.255.255.255
+        neighbor 192.168.0.1 activate
+        neighbor 192.168.0.2 activate
+        neighbor 192.168.0.4 activate
+        neighbor 192.168.0.5 activate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      ip ssh server algorithm authentication password
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: PC2
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: 55
+    y: 377
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 4302 bytes
+      !
+      ! Last configuration change at 21:26:49 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname PC3
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      enable password cisco
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      no ip domain lookup
+      ip domain name virl.info
+      ip cef
+      ipv6 unicast-routing
+      ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      username cisco privilege 15 secret 9 $14$V1uC$h.mdsvkNq4ZMRk$c6YiFFq3VrSWPoL2PZUPUjf2MpKVcDI75STePkAXeMk
+      !
+      redundancy
+      !
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       ip address 192.168.0.4 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+       description OOB Management
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.41 255.255.0.0
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/1
+       description to SW2
+       ip address 10.0.0.4 255.255.128.0
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      router ospf 1
+       passive-interface Loopback0
+       network 10.0.0.0 0.0.127.255 area 0
+       network 192.168.0.4 0.0.0.0 area 0
+      !
+      router bgp 1
+       bgp router-id 192.168.0.4
+       bgp log-neighbor-changes
+       neighbor 192.168.0.1 remote-as 1
+       neighbor 192.168.0.1 description iBGP peer R1
+       neighbor 192.168.0.1 update-source Loopback0
+       neighbor 192.168.0.2 remote-as 1
+       neighbor 192.168.0.2 description iBGP peer PC1
+       neighbor 192.168.0.2 update-source Loopback0
+       neighbor 192.168.0.3 remote-as 1
+       neighbor 192.168.0.3 description iBGP peer PC2
+       neighbor 192.168.0.3 update-source Loopback0
+       neighbor 192.168.0.5 remote-as 1
+       neighbor 192.168.0.5 description iBGP peer PC4
+       neighbor 192.168.0.5 update-source Loopback0
+       !
+       address-family ipv4
+        network 192.168.0.4 mask 255.255.255.255
+        neighbor 192.168.0.1 activate
+        neighbor 192.168.0.2 activate
+        neighbor 192.168.0.3 activate
+        neighbor 192.168.0.5 activate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      ip ssh server algorithm authentication password
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: PC3
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: 261
+    y: -50
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 4485 bytes
+      !
+      ! Last configuration change at 21:26:41 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname R1
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      enable password cisco
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      no ip domain lookup
+      ip domain name virl.info
+      ip cef
+      ipv6 unicast-routing
+      ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      username cisco privilege 15 secret 9 $14$LHH.$og8zySqTlHLOdU$rd/seZUcCQbCD9LBksewYQlnNPiipvqt/Y3UhFiI2hA
+      !
+      redundancy
+      !
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       ip address 192.168.0.1 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+       description OOB Management
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.43 255.255.0.0
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/1
+       description to SW2
+       ip address 10.0.0.1 255.255.128.0
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/2
+       description to SW3
+       ip address 10.0.128.1 255.255.255.252
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      router ospf 1
+       passive-interface Loopback0
+       network 10.0.0.0 0.0.127.255 area 0
+       network 10.0.128.0 0.0.0.3 area 0
+       network 192.168.0.1 0.0.0.0 area 0
+      !
+      router bgp 1
+       bgp router-id 192.168.0.1
+       bgp log-neighbor-changes
+       neighbor 192.168.0.2 remote-as 1
+       neighbor 192.168.0.2 description iBGP peer PC1
+       neighbor 192.168.0.2 update-source Loopback0
+       neighbor 192.168.0.3 remote-as 1
+       neighbor 192.168.0.3 description iBGP peer PC2
+       neighbor 192.168.0.3 update-source Loopback0
+       neighbor 192.168.0.4 remote-as 1
+       neighbor 192.168.0.4 description iBGP peer PC3
+       neighbor 192.168.0.4 update-source Loopback0
+       neighbor 192.168.0.5 remote-as 1
+       neighbor 192.168.0.5 description iBGP peer PC4
+       neighbor 192.168.0.5 update-source Loopback0
+       !
+       address-family ipv4
+        network 192.168.0.1 mask 255.255.255.255
+        neighbor 192.168.0.2 activate
+        neighbor 192.168.0.3 activate
+        neighbor 192.168.0.4 activate
+        neighbor 192.168.0.5 activate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      ip ssh server algorithm authentication password
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: 530
+    y: 165
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 3455 bytes
+      !
+      ! Last configuration change at 21:26:47 UTC Sat Jul 8 2023
+      !
+      version 15.2
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      service compress-config
+      !
+      hostname SW2
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      !
+      username cisco privilege 15 secret 5 $1$gMw/$QZGcvJl.bC805QPd1pzuX/
+      no aaa new-model
+      !
+      !
+      !
+      !
+      !
+      vtp domain virl.lab
+      vtp mode transparent
+      !
+      !
+      !
+      no ip domain-lookup
+      ip cef
+      no ipv6 cef
+      !
+      !
+      !
+      spanning-tree mode pvst
+      spanning-tree extend system-id
+      !
+      !
+      vlan 123
+       name MAIN-OFFICE
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       no ip address
+      !
+      interface GigabitEthernet0/0
+       description OOB management
+       no switchport
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.45 255.255.0.0
+       negotiation auto
+      !
+      interface GigabitEthernet0/1
+       description to PC3
+       switchport access vlan 123
+       switchport mode access
+       negotiation auto
+      !
+      interface GigabitEthernet0/2
+       description to R1
+       switchport access vlan 123
+       switchport mode access
+       negotiation auto
+      !
+      interface GigabitEthernet0/3
+       negotiation auto
+      !
+      interface GigabitEthernet1/0
+       negotiation auto
+      !
+      ip forward-protocol nd
+      !
+      no ip http server
+      ip http secure-server
+      !
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      !
+      !
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+       logging synchronous
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      !
+      monitor session 1 source interface Gi0/1 - 2
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    ram: null
+    tags: []
+    x: 263
+    y: 165
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet3/0
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      Building configuration...
+
+      Current configuration : 4304 bytes
+      !
+      ! Last configuration change at 21:26:49 UTC Sat Jul 8 2023
+      !
+      version 15.9
+      service timestamps debug datetime msec
+      service timestamps log datetime msec
+      no service password-encryption
+      !
+      hostname PC4
+      !
+      boot-start-marker
+      boot-end-marker
+      !
+      !
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      no logging console
+      enable password cisco
+      !
+      no aaa new-model
+      !
+      !
+      !
+      mmi polling-interval 60
+      no mmi auto-configure
+      no mmi pvc
+      mmi snmp-timeout 180
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      no ip domain lookup
+      ip domain name virl.info
+      ip cef
+      ipv6 unicast-routing
+      ipv6 cef
+      !
+      multilink bundle-name authenticated
+      !
+      !
+      !
+      !
+      username cisco privilege 15 secret 9 $14$tAAy$dus0aCVeOcfLzU$GLdwYdn4BLpGaYliKOSXrMgGJGoxdfP2gvCW3SeHE1c
+      !
+      redundancy
+      !
+      no cdp run
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      !
+      interface Loopback0
+       description Loopback
+       ip address 192.168.0.5 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+       description OOB Management
+       vrf forwarding Mgmt-intf
+       ip address 10.255.1.42 255.255.0.0
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      interface GigabitEthernet0/1
+       description to SW3
+       ip address 10.0.128.2 255.255.255.252
+       ip ospf cost 1
+       duplex full
+       speed auto
+       media-type rj45
+      !
+      router ospf 1
+       passive-interface Loopback0
+       network 10.0.128.0 0.0.0.3 area 0
+       network 192.168.0.5 0.0.0.0 area 0
+      !
+      router bgp 1
+       bgp router-id 192.168.0.5
+       bgp log-neighbor-changes
+       neighbor 192.168.0.1 remote-as 1
+       neighbor 192.168.0.1 description iBGP peer R1
+       neighbor 192.168.0.1 update-source Loopback0
+       neighbor 192.168.0.2 remote-as 1
+       neighbor 192.168.0.2 description iBGP peer PC1
+       neighbor 192.168.0.2 update-source Loopback0
+       neighbor 192.168.0.3 remote-as 1
+       neighbor 192.168.0.3 description iBGP peer PC2
+       neighbor 192.168.0.3 update-source Loopback0
+       neighbor 192.168.0.4 remote-as 1
+       neighbor 192.168.0.4 description iBGP peer PC3
+       neighbor 192.168.0.4 update-source Loopback0
+       !
+       address-family ipv4
+        network 192.168.0.5 mask 255.255.255.255
+        neighbor 192.168.0.1 activate
+        neighbor 192.168.0.2 activate
+        neighbor 192.168.0.3 activate
+        neighbor 192.168.0.4 activate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      !
+      !
+      no ip http server
+      no ip http secure-server
+      ip ssh server algorithm authentication password
+      !
+      ipv6 ioam timestamp
+      !
+      !
+      !
+      control-plane
+      !
+      banner exec ^^
+      banner incoming ^^
+      banner login ^^
+      !
+      line con 0
+       exec-timeout 0 0
+       password cisco
+      line aux 0
+      line vty 0 4
+       exec-timeout 0 0
+       password cisco
+       login local
+       transport input telnet ssh
+      !
+      no scheduler allocate
+      !
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: PC4
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: 263
+    y: 376
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+annotations: []
