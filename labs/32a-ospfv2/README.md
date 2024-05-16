@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [rapidPVST+.yaml file](../../31-layer-2/stp/rapidPVST+.yaml) 
+#️⃣ [router configs](../ospfv2.yaml)
 
 ---
 
