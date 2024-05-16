@@ -1,12 +1,12 @@
 ◀️ [Parent directory](../../) 
 
-#️⃣ [vrf.yaml file](../../labs/12-vrf/vrf.yaml) 
+#️⃣ [vrf.yaml file](https://github.com/tech-zero/assets/blob/main/yaml/vrf.yaml)
 
 ---
 
 ### VRF Lab
 
-![Lab topology](https://github.com/tech-zero/encor-study/blob/main/assets/images/vrf.png?raw=true)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/vrf.png)
 
 #### Lab Tasks:
 + Globally define three VRFs
