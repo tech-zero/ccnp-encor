@@ -1,4 +1,4 @@
-◀️ [Parent directory](../../) 
+◀️ [Parent directory](../) 
 
 #️⃣ [rapidPVST+.yaml file](../../31-layer-2/stp/rapidPVST+.yaml) 
 
