@@ -1,6 +1,6 @@
-# CCNP
-## 350-401 ENCOR v1.1 Exam Topics
-## Exam Description
+## CCNP
+#### 350-401 ENCOR v1.1 Exam Topics
+#### Exam Description
   > To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
   > certification, you must pass the 350-401 ENCOR exam.  This exam tests your knowledge of:
 
@@ -151,7 +151,7 @@
 
 ---
 
-### Practice skills in the exam
+#### Practice skills in the exam
 
 > Cisco's performance-based testing give you an experience
 > that best replicates a true lab environment.  As a result,
@@ -162,4 +162,4 @@
 ---
 
 #### ENCOR Study Resources
-[Architecture](architecture/README.md) | [Virtualization](virtualization/README.md) | [Infrastructure](infrastructure/README.md) | [Network Assurance](network_assurance/README.md) | [Security](security/README.md) | [Automation](automation/README.md)
+Coming soon!
