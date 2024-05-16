@@ -1,4 +1,4 @@
-◀️ [Parent directory](../../) 
+◀️ [Parent directory](../) 
 
 #️⃣ [vrf.yaml file](https://github.com/tech-zero/assets/blob/main/yaml/vrf.yaml)
 
