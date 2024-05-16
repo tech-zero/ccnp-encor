@@ -1,6 +1,6 @@
 lab:
-  description: OSPFv2 Lab - Copyright 2023, Kevin Wallace Training, LLC
-  notes: |-
+  description: OSPFv2 lab
+  notes:|-
     ## Lab Tasks
     - Configure OSPFv2 for R3, R4, and R5
     - All R3 interfaces are in Area 1
@@ -1067,3 +1067,5 @@ nodes:
         slot: 1
         type: physical
 annotations: []
+
+    ##
