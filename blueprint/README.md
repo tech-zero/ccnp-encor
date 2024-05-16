@@ -1,7 +1,5 @@
 # CCNP
-ENCOR 350-401 | ENARSI 300-410
-
-# 350-401 ENCOR v1.1 Exam Topics
+## 350-401 ENCOR v1.1 Exam Topics
 ## Exam Description
   > To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
   > certification, you must pass the 350-401 ENCOR exam.  This exam tests your knowledge of:
