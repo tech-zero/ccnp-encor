@@ -20,4 +20,4 @@ In this lab, take a look at the traditional apporach to configuring an OSPFv3 ne
 
 ---
 
-:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32b-ospf-rfilter.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32d-ospfv3-address-family.md)
