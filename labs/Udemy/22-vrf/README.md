@@ -19,4 +19,4 @@
 
 ---
 
-:white_check_mark: [CLI reference](solution/README.md)
+:white_check_mark: [CLI reference](solution/22-VRF.md)
