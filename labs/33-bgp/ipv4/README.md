@@ -12,4 +12,6 @@
 - Connect R3 in the enterprise network (AS 655001) to R2, ISP1, and ISP2 using BGP
 - BGP is already configured on all routers except R3
  
-[BGP labs](../) 
+---
+
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/33-bgp4.md)
