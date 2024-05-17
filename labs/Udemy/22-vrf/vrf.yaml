@@ -1,5 +1,5 @@
 lab:
-  description: VRF Lab - Copyright 2023, Kevin Wallace Training, LLC
+  description: VRF Lab
   notes: |-
     ## Lab Tasks
     - Globally define three VRFs
