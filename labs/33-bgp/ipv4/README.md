@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./ospfv3+adfam.yaml)
+#️⃣ [lab configs](./bgp4.yaml)
 
 ---
 
