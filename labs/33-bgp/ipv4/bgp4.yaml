@@ -1,5 +1,5 @@
 lab:
-  description: BGP for IPv4 Lab - Copyright 2023, Kevin Wallace Training, LLC
+  description: BGP for IPv4 Lab
   notes: |-
     ## Lab Tasks
     - Connect R3 in the enterprise network (AS 65001) to R2, ISP1, and ISP2 using BGP 
