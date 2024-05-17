@@ -19,4 +19,4 @@
 
 ---
 
-:white_check_mark: [CLI reference](solution/22-VRF.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solution/22-VRF.md)
