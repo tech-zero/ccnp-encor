@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./ospf+trad+config.yaml)
+#️⃣ [lab configs](/ospf+trad+config.yaml)
 
 In this lab, take a look at the traditional apporach to configuring an OSPFv3 network.  Meaning, an OSPF process is created then under interface configuration mode, for each interface, you will enable them to be part of the OSPFv3 process.
 
