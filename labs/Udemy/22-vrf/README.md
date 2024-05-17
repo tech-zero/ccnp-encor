@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [vrf.yaml file](./vrf.yaml)
+#️⃣ [Lab configs](./vrf.yaml)
 
 ---
 
