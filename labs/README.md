@@ -1,5 +1,5 @@
-### Links to download GNS3 releases 
+### I am using the latest version of GNS3 for my labs
 
-[Version 2.2.47](https://github.com/GNS3/gns3-gui/releases)
+### Here's a link to find the release that fits for you:
 
-[Version 2.2.46](https://github.com/GNS3/gns3-gui/releases?q=2.2.46&expanded=true)
+[GNS3](https://github.com/GNS3/gns3-gui/releases?q=2.2.&expanded=true)
