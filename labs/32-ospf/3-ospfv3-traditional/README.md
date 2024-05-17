@@ -2,12 +2,7 @@
 
 #️⃣ [lab configs](./ospf+trad+config.yaml)
 
-In this lab, take a look at how to filter routes coming in from another area and this topology already has OSPF and EIGRP configured as shown in the diagram.
-
-Connect to R5 and do a show ip route.  Notice that we see two inter-area routes being learned from area 1.
-192.0.2.0 and 198.51.100.0
-
-Your goal for this lab is to filter these two interarea routes that are being learned from OSPF Area 1.  That filtering will be done on the area border router (ABR), which in this topology will be R4.  Perform that filtering using a prefix list and we want to apply that prefix list so that we filter advertisements going into area zero.
+In this lab, take a look at the traditional apporach to configuring an OSPFv3 network.  Meaning, an OSPF process is created then under interface configuration mode, for each interface, you will enable them to be part of the OSPFv3 process.
 
 ---
 
@@ -16,8 +11,12 @@ Your goal for this lab is to filter these two interarea routes that are being le
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/traditional-ospfv3.png)
 
 ### Lab Tasks:
-- Filter out two inter-area routes learned from OSPF Area 1
-- Setup prefix list on ABR (R4)
+- Configure OSPFv3 for R3, R4, and R5 using the traditional method
+- All R3 interfaces are in Area 1
+- R4's Gig 0/1 interface is in Area 1
+- R4's Gig 0/2 interface is in Area 0
+- All R5 interfaces are in Area 0
+- R1 and R2 are already configured for routing
 
 ---
 
