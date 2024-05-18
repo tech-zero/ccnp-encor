@@ -11,19 +11,19 @@ line con 0
  exec-timeout 0 0
  logging synchronous
  exit
-interface g0/0/0
+interface g0/0
  ip address 198.51.100.1 255.255.255.252
  ipv6 address fe80::1:1 link-local
  ipv6 address 2001:db8:198:51::1/64
  no shutdown
  exit
-interface g0/0/1
+interface g0/1
  ip address 172.16.11.1 255.255.255.0
  ipv6 address fe80::1:2 link-local
  ipv6 address 2001:db8:172:11::1/64
  no shutdown
  exit
-interface g0/0/2
+interface g0/2
  ip address 172.16.13.1 255.255.255.0
  ipv6 address fe80::1:3 link-local
  ipv6 address 2001:db8:172:13::1/64
@@ -41,7 +41,7 @@ line con 0
  exec-timeout 0 0
  logging synchronous
  exit
-interface g0/0/0
+interface g0/0
  ip address 198.51.100.2 255.255.255.252
  ipv6 address fe80::2:1 link-local
  ipv6 address 2001:db8:198:51::2/64
@@ -66,13 +66,13 @@ line con 0
  exec-timeout 0 0
  logging synchronous
  exit
-interface g0/0/1
+interface g0/1
  ip address 172.16.10.1 255.255.255.0
  ipv6 address fe80::3:2 link-local
  ipv6 address 2001:db8:172:10::1/64
  no shutdown
  exit
-interface g0/0/2
+interface g0/2
  ip address 172.16.13.2 255.255.255.0
  ipv6 address fe80::3:3 link-local
  ipv6 address 2001:db8:172:13::2/64
@@ -104,7 +104,7 @@ vlan 102
 vlan 999
  name NATIVE
  exit
-interface g1/0/11
+interface g1/0
  no switchport
  ip address 172.16.11.2 255.255.255.0
  ipv6 address fe80::d1:1 link-local
@@ -166,7 +166,7 @@ vlan 102
 vlan 999
  name NATIVE
  exit
-interface g1/0/11
+interface g1/0
  no switchport
  ip address 172.16.10.2 255.255.255.0
  ipv6 address fe80::d1:1 link-local
