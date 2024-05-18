@@ -1,4 +1,4 @@
-### Review Lab 2 device configs
+### Review Lab 1 device configs
 
 #### Router EDGE
 
