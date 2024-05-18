@@ -1,4 +1,4 @@
-# VRF Lab
+# VRF Lab device configs
   
   ## Lab Tasks
   - Globally define three VRFs
@@ -8,69 +8,13 @@
   - TENANT A must be assigned to VLAN 2
   - TENANT B must be assigned to VLAN 3
   - TENANT C must be assigned to VLAN 4
- ````
-      Building configuration...
-
-      Current configuration : 2921 bytes
-      !
-      ! Last configuration change at 13:54:27 UTC Sat Jul 1 2023
-      !
-      version 15.9
-      service timestamps debug datetime msec
-      service timestamps log datetime msec
-      no service password-encryption
-      !
+ 
+ ```
       hostname COMMON
-      !
-      boot-start-marker
-      boot-end-marker
-      !
-      !
-      no logging console
-      !
-      no aaa new-model
-      !
-      !
-      !
-      mmi polling-interval 60
-      no mmi auto-configure
-      no mmi pvc
-      mmi snmp-timeout 180
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
       !
       no ip domain lookup
       ip cef
       no ipv6 cef
-      !
-      multilink bundle-name authenticated
-      !
-      !
-      !
-      !
-      !
-      redundancy
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
-      !
       !
       !
       interface GigabitEthernet0/0
@@ -121,18 +65,8 @@
       !
       end
  ```
- ```
-      Building configuration...
 
-      Current configuration : 3100 bytes
-      !
-      ! Last configuration change at 13:54:18 UTC Sat Jul 1 2023
-      !
-      version 15.9
-      service timestamps debug datetime msec
-      service timestamps log datetime msec
-      no service password-encryption
-      !
+ ```
       hostname TENANT-A
       !
       boot-start-marker
@@ -366,6 +300,7 @@
       !
       end
  ```
+
  ```
       Building configuration...
 
@@ -488,8 +423,8 @@
       !
       end
  ```
+
  ```
-      !
       hostname SW1
       !
       boot-start-marker
@@ -593,7 +528,7 @@
       !
       end
 
-````
+```
  
 ```
     Building configuration...
@@ -690,7 +625,7 @@
       !
       end
 
-````
+```
 
 ```      
       Building configuration...
