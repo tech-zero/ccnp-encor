@@ -6,7 +6,7 @@
 
 ### Rapid PVST+ Lab
 
-![Lab topology](https://github.com/tech-zero/encor-study/blob/main/images/pvst+.png?raw=true)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/pvst+.png?raw=true)
 
 #### Lab Tasks:
 - Configure Rapid PVST+ on all switches
