@@ -1,5 +1,5 @@
 lab:
-  description: Rapid PVST+ Lab - Copyright 2023, Kevin Wallace Training, LLC
+  description: Rapid PVST+ Lab
   notes: |-
     ## Lab Tasks
     - Configure Rapid PVST+ on all switches
