@@ -21,4 +21,4 @@ Your goal for this lab is to filter these two interarea routes that are being le
 
 ---
 
-:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32b-ospf-rfilter.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/ospf2.md)
