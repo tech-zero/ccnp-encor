@@ -63,14 +63,11 @@
        negotiation auto
        no cdp enable
       !
-      ip forward-protocol nd
-      !
       no ip http server
       no ip http secure-server
       !
       ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
       ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-      !
       !
       no service-routing capabilities-manager
       !
@@ -90,7 +87,6 @@
        exec-timeout 0 0
        login
       !
-      !
       end
 ```
     
@@ -99,7 +95,6 @@
       !
       boot-start-marker
       boot-end-marker
-      !
       !
       logging console
       !
@@ -188,7 +183,6 @@
       line vty 0 4
        exec-timeout 0 0
        login
-      !
       !
       end
 ```
