@@ -1,8 +1,8 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [Device configs file](../Udemy/2-pvst+/CONFIGs.md)
+#️⃣ [Device configs file](../2-pvst+/CONFIGs.md)
 
-#️⃣ [rapidPVST+.yaml file](../Udemy/2-pvst+/pvst+.yaml) 
+#️⃣ [rapidPVST+.yaml file](../2-pvst+/pvst+.yaml) 
 
 ---
 
