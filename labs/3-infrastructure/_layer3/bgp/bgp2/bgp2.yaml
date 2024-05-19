@@ -1,5 +1,5 @@
 lab:
-  description: BGP for IPv6 Lab - Copyright 2023, Kevin Wallace Training, LLC
+  description: BGP for IPv6 Lab
   notes: |-
     ## Lab Tasks
     - Create a route map to advertise next-hop IPv6 address
