@@ -1,6 +1,6 @@
 ## HSRP Lab
 
-![HSRP topology](https://github.com/tech-zero/encor-study/blob/main/images/hsrp.png?raw=true)
+![HSRP topology](https://github.com/tech-zero/assets/blob/main/images/hsrp.png?raw=true)
 
 #### Lab Tasks:
  - Configure HSRP for servicing the virtual IP address 10.1.1.1
@@ -8,4 +8,4 @@
  - Configure routers to reclaim roles in case of a failure
  - Test failover configuration
 
-[IP services labs](../)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/hsrp.md)
