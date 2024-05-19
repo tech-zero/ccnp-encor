@@ -20,4 +20,4 @@ In this lab, take a look at the traditional apporach to configuring an OSPFv3 ne
 
 ---
 
-:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32c-ospfv3-traditional.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/ospf3.md)
