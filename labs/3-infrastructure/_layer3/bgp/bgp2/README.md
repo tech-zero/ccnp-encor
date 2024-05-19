@@ -8,8 +8,8 @@
 - Activate IPv6 address family neighbor
 - Associate route map with neighbor, apply outbound
 
-![AAA topology](https://github.com/tech-zero/encor-study/blob/main/images/bgp-ipv6.png?raw=true)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/bgp2.png?raw=true)
 
 [BGP labs](../) 
 
-[Lab exam items](../../)
+[Lab exam items](https://github.com/assets/blob/mainsolutions/bgp2.md)
