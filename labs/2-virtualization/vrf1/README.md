@@ -2,10 +2,11 @@
 
 #️⃣ [Lab configs](./vrf.yaml)
 
+#️⃣ [Lab configs](./CONFIGs.md)
+
 ---
 
 ### VRF Lab
-
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/vrf.png)
 
 #### Lab Tasks:
