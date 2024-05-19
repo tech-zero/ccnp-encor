@@ -1,5 +1,5 @@
 ◀️ [Parent directory](../) 
-
+#️⃣ [rapidPVST+.yaml file](../../31-layer-2/stp/CONFIGs.yaml)
 #️⃣ [rapidPVST+.yaml file](../../31-layer-2/stp/rapidPVST+.yaml) 
 
 ---
