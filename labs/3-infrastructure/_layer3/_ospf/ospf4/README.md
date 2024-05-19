@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./ospfv3+adfam.yaml)
+#️⃣ [lab configs](./ospf4.yaml)
 
 ---
 
@@ -18,4 +18,4 @@
 
 ---
 
-:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/32d-ospfv3-address-family.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/ospf4.md)
