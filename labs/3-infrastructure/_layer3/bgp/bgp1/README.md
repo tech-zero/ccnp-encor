@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./bgp4.yaml)
+#️⃣ [lab configs](./bgp1.yaml)
 
 ---
 
