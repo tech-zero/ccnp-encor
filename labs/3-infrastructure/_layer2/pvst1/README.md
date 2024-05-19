@@ -2,7 +2,7 @@
 
 #️⃣ [Device configs file](../pvst1/CONFIGs.md)
 
-#️⃣ [rapidPVST+.yaml file](../pvst1/pvst+.yaml) 
+#️⃣ [rapidPVST+.yaml file](../pvst1/pvst.yaml) 
 
 ---
 
