@@ -16,6 +16,4 @@
 - Activate IPv6 address family neighbor
 - Associate route map with neighbor, apply outbound
 
-[BGP labs](../) 
-
 :white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/bgp2.md)
