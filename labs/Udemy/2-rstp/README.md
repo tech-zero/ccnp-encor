@@ -16,4 +16,4 @@
 
 ---
 
-:white_check_mark: [CLI reference](solution/README.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/2-rstp.md)
