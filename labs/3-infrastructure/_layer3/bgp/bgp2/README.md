@@ -1,4 +1,12 @@
+◀️ [Parent directory](../) 
+
+#️⃣ [lab configs](./bgp2.yaml)
+
+---
+
 ### BGP for IPv6 Lab
+
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/bgp2.png?raw=true)
 
 #### Lab Tasks:
 
@@ -8,8 +16,6 @@
 - Activate IPv6 address family neighbor
 - Associate route map with neighbor, apply outbound
 
-![Lab topology](https://github.com/tech-zero/assets/blob/main/images/bgp2.png?raw=true)
-
 [BGP labs](../) 
 
-[Lab exam items](https://github.com/assets/blob/mainsolutions/bgp2.md)
+:white_check_mark: [CLI reference](https://github.com/tech-zero/assets/blob/main/solutions/bgp2.md)
