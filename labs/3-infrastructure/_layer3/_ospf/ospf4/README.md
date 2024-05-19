@@ -1,6 +1,8 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./ospf4.yaml)
+#️⃣ [ospf4.yaml](./ospf4.yaml)
+
+#️⃣ [lab configs](./CONFIGs.md)
 
 ---
 
