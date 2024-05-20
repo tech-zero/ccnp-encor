@@ -1,6 +1,8 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [lab configs](./ospfv2.yaml)
+#️⃣ [device configs: ospf1.yaml](./ospf1.yaml)
+
+#️⃣ [Download ospf1.gns3project ](./ospf1.gns3project)
 
 ---
 
