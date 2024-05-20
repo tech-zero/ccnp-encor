@@ -2,7 +2,7 @@
 
 #️⃣ [yaml config file](../lab1/pvst.yaml)
 
-#️⃣ [GNS3 portable lab](../lab1/README.md) 
+#️⃣ GNS3 portable lab 
 
 ---
 
