@@ -1,4 +1,0 @@
-🔼 [Parent directory](../)
-
----
-
