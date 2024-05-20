@@ -2,7 +2,7 @@
 
 #️⃣ [yaml config file](../lab1/pvst.yaml)
 
-#️⃣ [.gns3project](../lab1/pvst1.gns3project)
+#️⃣ [Downlad pvst.gns3project](../lab1/pvst1.gns3project)
 
 ---
 
