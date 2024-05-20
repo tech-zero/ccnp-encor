@@ -1,6 +1,6 @@
 ◀️ [Parent directory](../) 
 
-#️⃣ [Device configs file](../lab1/CONFIGs.md)
+#️⃣ [yaml config file](../lab1/pvst.yaml)
 
 #️⃣ [GNS3 portable lab](../lab1/README.md) 
 
