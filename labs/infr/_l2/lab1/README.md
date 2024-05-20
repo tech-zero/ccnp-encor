@@ -2,7 +2,7 @@
 
 #️⃣ [yaml config file](../lab1/pvst.yaml)
 
-#️⃣ GNS3 portable lab 
+#️⃣ Download GNS3 portable lab
 
 ---
 
