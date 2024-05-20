@@ -2,7 +2,7 @@
 
 #️⃣ [Device configs file](../lab1/CONFIGs.md)
 
-#️⃣ [rapidPVST.yaml file](../lab1/pvst.yaml) 
+#️⃣ [GNS3 portable lab](../lab1/README.md) 
 
 ---
 
