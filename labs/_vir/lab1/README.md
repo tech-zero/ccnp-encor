@@ -2,7 +2,7 @@
 
 #️⃣ [Lab yaml file](./vrf.yaml)
 
-#️⃣ [Lab configs](./CONFIGs.md)
+#️⃣ [.gns3project](./_VRFLab1.gns3project)
 
 ---
 
