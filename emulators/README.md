@@ -1,6 +1,6 @@
 #### For labs, I use [GNS3](https://github.com/GNS3/gns3-gui/releases?q=2.2.&expanded=true)...check out their latest release.
 
-[Graphical Network Simulator (GNS3)](https://github.com/GNS3)
+[Graphical Network Simulator-3 (GNS3)](https://github.com/GNS3)
 
 [GNS3 official website](https://gns3.com)
 
