@@ -2,8 +2,9 @@
 
 [Graphical Network Simulator-3 (GNS3)](https://github.com/GNS3)
 
-[GNS3 official website](https://gns3.com)
+[icon](https://github.com/tech-zero/assets/blob/main/images/gns3-icon.png)[GNS3 official website](https://gns3.com)
 
+images/gns3-icon.png
 ---
 
 #### Cisco Modeling Lab (CML)
