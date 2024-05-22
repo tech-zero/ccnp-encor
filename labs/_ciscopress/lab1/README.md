@@ -14,9 +14,9 @@ Today we review some of the configuration and troubleshooting concepts covered i
 The tasks for this review lab are broken up into six parts:
 - [**Part 1:** Build the Network and Configur Basic Device Settings and Interface Addressing](https://github.com/tech-zero/assets/blob/main/Day2Lab1/Part1/README.md)
 
-- [**Part 2:** Configure the Layer 2 Network and Host Support](https://github.com/tech-zero/assets/blob/main/solutions/day2lab1-2.md)
+- [**Part 2:** Configure the Layer 2 Network and Host Support](https://github.com/tech-zero/assets/blob/main/Day2Lab1/Part2/README.md)
 
-- [**Part 3:** Configure Routing Protocols](https://github.com/tech-zero/assets/blob/main/solutions/day2lab1-3.md)
+- [**Part 3:** Configure Routing Protocols](https://github.com/tech-zero/assets/blob/main/Day2Lab1/Part3/README.md)
 
 - **Part 4:** Configure First-Hop Redundancy and IP SLA Functionality
 
