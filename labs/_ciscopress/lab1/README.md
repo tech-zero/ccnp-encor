@@ -3,6 +3,17 @@
 ### Objective
 This lab reviews some of the configuration and troubleshooting concepts covered in the ENCOR 350-401 Exam Topics.  
 
+### Topology
+In this lab, complete the configuration of the network so that:  
++ There is full end-to-end reachability.  All PCs should be able to ping Loopback 0 on the ISP router.
++ Hosts have reliable default gateway support in the event of a failure at the distribution layer.
++ Management protocols such as NetFlow, SNMP, syslog, NTP, and AAA are operational within the HQ Network part of the topology.
+
+Be careful to verify that your configurations meet the provided specifications and that the devices perform as required. Initial   configuration scripts and answer scripts are available on the Cisco Press website. You need to register your book to access this bonus content. For information on how to register your book, see the Introduction.  
+
+For this review lab, you need three routers (IOS, IOSv, or IOS XE), three switches (Layer 2/Layer 3), and four Windows or Linux PCs.
+
+---
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/gns3-img2.png)
 
 ---
