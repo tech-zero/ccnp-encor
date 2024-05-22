@@ -12,7 +12,7 @@ Today we review some of the configuration and troubleshooting concepts covered i
 
 ### Tasks
 The tasks for this review lab are broken up into six parts:
-- [**Part 1:** Build the Network and Configur Basic Device Settings and Interface Addressing](https://github.com/tech-zero/assets/blob/main/d2lab1/1art1/README.md)
+- [**Part 1:** Build the Network and Configur Basic Device Settings and Interface Addressing](https://github.com/tech-zero/assets/blob/main/d2lab1/part1/README.md)
 
 - [**Part 2:** Configure the Layer 2 Network and Host Support](https://github.com/tech-zero/assets/blob/main/d2lab1/part2/README.md)
 
