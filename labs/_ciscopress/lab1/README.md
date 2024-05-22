@@ -21,6 +21,8 @@ For this review lab, you need three routers (IOS, IOSv, or IOS XE), three switch
 ### Addressing Table - provides the IPv4 and IPv6 addresses for all devies in this review lab.
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/d2addresstable1.png)
 
+---
+
 ### Tasks
 The tasks for this review lab are broken up into six parts:
 + [**Part 1:** Build the Network and Configure Basic Device Settings and Interface Addressing](https://github.com/tech-zero/assets/blob/main/d2lab1/part1/README.md)
