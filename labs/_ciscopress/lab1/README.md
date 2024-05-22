@@ -8,7 +8,7 @@ Today we review some of the configuration and troubleshooting concepts covered i
 ---
 
 ### Addressing Table - provides the IPv4 and IPv6 addresses for all devies in this review lab.
-![Lab topology](https://github.com/tech-zero/assets/blob/main/images/day2addresstable.png)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/d2addresstable1.png)
 
 ### Tasks
 The tasks for this review lab are broken up into six parts:
