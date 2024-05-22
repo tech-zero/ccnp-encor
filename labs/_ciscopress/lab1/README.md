@@ -1,7 +1,7 @@
 ## Day 2 Review Lab 1
 
 ### Objective
-Today we review some of the configuration and troubleshooting concepts covered in the ENCOR 350
+This lab reviews some of the configuration and troubleshooting concepts covered in the ENCOR 350-401 Exam Topics.  
 
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/gns3-img2.png)
 
