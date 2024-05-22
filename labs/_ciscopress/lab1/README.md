@@ -13,7 +13,7 @@ Be careful to verify that your configurations meet the provided specifications a
 
 For this review lab, you need three routers (IOS, IOSv, or IOS XE), three switches (Layer 2/Layer 3), and four Windows or Linux PCs.
 
-[Download the gns3 lab](labs/_ciscopress/lab1/d2lab1.gns3project.zip)
+[Download the gns3 lab](/_ciscopress/lab1/d2lab1.gns3project.zip)
 
 ---
 ![Lab topology](https://github.com/tech-zero/assets/blob/main/images/gns3-img2.png)
