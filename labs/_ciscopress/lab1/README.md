@@ -9,7 +9,7 @@ In this lab, complete the configuration of the network so that:
 + Hosts have reliable default gateway support in the event of a failure at the distribution layer.
 + Management protocols such as NetFlow, SNMP, syslog, NTP, and AAA are operational within the HQ Network part of the topology.
 
-Be careful to verify that your configurations meet the provided specifications and that the devices perform as required. Initial   configuration scripts and answer scripts are available on the Cisco Press website. You need to register your book to access this bonus content. For information on how to register your book, see the Introduction.  
+Be careful to verify that your configurations meet the provided specifications and that the devices perform as required.   
 
 For this review lab, you need three routers (IOS, IOSv, or IOS XE), three switches (Layer 2/Layer 3), and four Windows or Linux PCs.
 
