@@ -16,7 +16,7 @@ The tasks for this review lab are broken up into six parts:
 
 - [**Part 2:** Configure the Layer 2 Network and Host Support](https://github.com/tech-zero/assets/blob/main/solutions/day2lab1-2.md)
 
-- **Part 3:** Configure Routing Protocols
+- [**Part 3:** Configure Routing Protocols](https://github.com/tech-zero/assets/blob/main/solutions/day2lab1-3.md)
 
 - **Part 4:** Configure First-Hop Redundancy and IP SLA Functionality
 
