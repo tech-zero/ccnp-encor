@@ -1,4 +1,4 @@
-improt getpass
+import getpass
 import sys
 import telnetlib
 
