@@ -21,7 +21,7 @@ For this review lab, you need three routers (IOS, IOSv, or IOS XE), three switch
 ---
 
 ### Addressing Table - provides the IPv4 and IPv6 addresses for all devies in this review lab.
-![Lab topology](https://github.com/tech-zero/assets/blob/main/images/2address-table1.png)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/2address-table2.png)
 
 ---
 
