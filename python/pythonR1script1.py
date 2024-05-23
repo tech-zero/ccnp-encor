@@ -12,8 +12,7 @@ tn.read_until("Username")
 tn.write(user + "\n")
 if password:
     tn.read_until("Password: ")
-    tn.wrie(password + "\n")
-
+    tn.write(password + "\n")
     tn.write("enable\n")
     tn.write("cisco\n")
     tn.write("conf t\n")
