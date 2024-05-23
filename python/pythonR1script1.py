@@ -1,10 +1,10 @@
 import getpass
 import sys
-from symbol import raw_input
+from symbol import eval_input
 import telnetlib
 
 HOST = "192.168.122.227"
-user = raw_input("Enter your telnet username: ")
+user = eval_input("Enter your telnet username: ")
 password = getpass.getpass()
 
 tn = telnetlib.Telnet(HOST)
