@@ -5,5 +5,5 @@
 - PC1 should only be able to ping server and have Telnet access
 - PC2 should only be able to ping server and have HTTP access
   
-✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)
+✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)  
 ◀️ [Back to main](/)
