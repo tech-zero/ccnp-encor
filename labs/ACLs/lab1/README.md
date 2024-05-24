@@ -8,3 +8,7 @@
 - PC2 should only be able to ping server and have HTTP access
 
 [Lab Exam Items](../)
+
+✅ [CLI Solution](/solutions/acl-lab1.md)
+
+◀️ [Back to lab](https://github.com/tech-zero/ccnp-encor/blob/main/labs/31dayrev/lab1/README.md)
