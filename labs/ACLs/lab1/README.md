@@ -1,6 +1,6 @@
  ### Named Extended ACLs Lab
 
-![Lab topology](https://github.com/tech-zero/encor-study/blob/main/images/acl.png?raw=true)
+![Lab topology](https://github.com/tech-zero/assets/blob/main/images/acl.png?raw=true)
 
 #### Lab Tasks:
 - Create two extended named ACLs
