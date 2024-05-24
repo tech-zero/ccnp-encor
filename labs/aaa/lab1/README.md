@@ -12,6 +12,7 @@
   - TACACS+ server group should be primary method, followed by local login, and enable password
 - Enable authorization requirement for EXEC shell
   - TACACS+ server group should be primary method, followed by local login
-  - Test by logging out/in to the console  
+  - Test by logging out/in to the console
+    
 ✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)
 ◀️ [Back to main](/)
