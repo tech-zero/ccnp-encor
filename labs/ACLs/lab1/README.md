@@ -9,4 +9,4 @@
 
 ✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)
 
-◀️ [Back to main](./)
+◀️ [Back to main](/)
