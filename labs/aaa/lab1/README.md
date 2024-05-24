@@ -1,6 +1,6 @@
 ### AAA Lab
 
-![AAA topology](https://github.com/tech-zero/encor-study/blob/main/images/aaa.png?raw=true)
+![AAA topology](https://github.com/tech-zero/assets/blob/main/images/aaa.png)
 
 #### Lab Tasks:
 - Enable AAA globally
