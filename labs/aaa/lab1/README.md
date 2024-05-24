@@ -14,5 +14,5 @@
   - TACACS+ server group should be primary method, followed by local login
   - Test by logging out/in to the console
     
-✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)  
+✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/aaa-lab1.md)  
 ◀️ [Back to main](/)
