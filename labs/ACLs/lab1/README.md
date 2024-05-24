@@ -9,6 +9,6 @@
 
 [Lab Exam Items](../)
 
-✅ [CLI Solution](/solutions/acl-lab1.md)
+✅ [CLI Solution](https://github.com/tech-zero/assets/blob/main/solutions/acl-lab1.md)
 
 ◀️ [Back to lab](https://github.com/tech-zero/ccnp-encor/blob/main/labs/31dayrev/lab1/README.md)
