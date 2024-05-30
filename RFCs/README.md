@@ -43,6 +43,8 @@
 ---
 
 ### QoS
+[RFC 791 - Internet Protocol, RFC Internet Standards, Sept 1981.](https://datatracker.ietf.org/doc/rfc791)
+
 [RFC 1633 - Integrated Services in the Internet Architecture: An Overview, June 1994.](https://datatracker.ietf.org/doc/rfc1633)
 
 [RFC 2474 - Definition of the Differentiated Services Field (DS Field) in the IPv4 and IPv6 Headers, December 1998.](https://datatracker.ietf.org/doc/rfc2474)
