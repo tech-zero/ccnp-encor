@@ -1,5 +1,5 @@
 # Router/Switch Basic SSH Configuration
-### GNS3 NAT node GW (192.168.122.1) is always on
+### GNS3 NAT node GW (192.168.122.1) in-band network MGMT.
 ### Config with privilege-level settings
 ```
 hostname XX1
