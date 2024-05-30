@@ -11,10 +11,18 @@ ipv6 unicast-routing
 ipv6 cef
 logging console
 cdp run
-! Router connected to GNS3 NAT node gateway
+! Router connected to GNS3 NAT node gateway using normal interface
 interface GigabitEthernet 0/0
  ip address 192.168.122.XXX 255.255.255.0
  no shutdown
+exit
+!
+! Router connected to GNS3 NAT node gateway using subinterface
+interface GigabitEthernet 0/0
+ no shutdown
+interface GigabitEthernet 0/0.1
+ encapsulation dot1q 1
+ ip address 192.168.122.XXX 255.255.255.0
 exit
 !
 ! Switch connected to GNS3 NAT node gateway
@@ -29,6 +37,6 @@ line vty 0 4
  logging synchronous
  login local
  transport input ssh
-exit
+end
 wr
 ```
