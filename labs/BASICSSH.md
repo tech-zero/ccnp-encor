@@ -1,4 +1,5 @@
 # Router/Switch Basic SSH Configuration
+### GNS3 NAT node GW (192.168.122.1) is always on
 ### Config with privilege-level settings
 ```
 hostname XX1
@@ -10,13 +11,13 @@ ipv6 unicast-routing
 ipv6 cef
 logging console
 cdp run
-! Router connected to GNS3 NAT0 Gateway
+! Router connected to GNS3 NAT node gateway
 interface GigabitEthernet 0/0
  ip address 192.168.122.XXX 255.255.255.0
  no shutdown
 exit
 !
-! Switch connected to GNS3 NAT 0 Gateway
+! Switch connected to GNS3 NAT node gateway
 interface vlan 1
  ip address 192.168.122.XXX 255.255.255.0
  no shutdown
