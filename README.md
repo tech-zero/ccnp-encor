@@ -1,21 +1,7 @@
-```
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::  _______  _____  _____   _    _           _____  _____    _____   ::  
-:: |__  __| | ___| | ____| | |  | |         | ___| |  __ \  |  _  |  ::
-::    | |   | |    | |     | |  | |  ____   | |    | |  | | | | | |  ::
-::    | |   | |_   | |     | |__| | |__  |  | |_   | |_/ /  | | | |  ::   
-::    | |   |  _|  | |     |  __  |   / /   |  _|  | _  /   | | | |  ::
-::    | |   | |    | |     | |  | |  / /__  | |    | |\ \   | | | |  ::
-::    | |   | |__  | |___  | |  | | |____|  | |__  | | \ \  | |_| |  :: 
-::    |_|   |____| |_____| |_|  |_|         |____| |_|  \_\ |_____|  ::  
-::                                                                   ::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-```
-## 350-401 ENCOR v1.1 Exam Blueprint
-
-#### Exam Description
-  > To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
-  > certification, you must pass the 350-401 ENCOR exam.  This exam tests your knowledge of:
+# 350-401 ENCOR v1.1 Exam Blueprint
+## Exam Description
+To earn your CCNP Enterprise, CCIE Enterprise Infrastructure, or CCIE Enterprise Wireless  
+certification, you must pass the 350-401 ENCOR exam.  This exam tests your knowledge of:  
 
 <details>
   <summary>1.0 Architecture 15%</summary>
@@ -164,13 +150,10 @@
 
 ---
 
-#### Practice skills in the exam
-
-> Cisco's performance-based testing give you an experience
-> that best replicates a true lab environment.  As a result,
-> the number of questions on your exam may vary.  To find
-> out more about this testing experience, read
-> Cisco's [Lab exam blog](https://blogs.cisco.com/learning/new-performance-based-lab-exam-items-build-opportunities)
+### Practice skills in the exam
+Cisco's performance-based testing give you an experience that best replicates a true lab environment.  
+As a result, the number of questions on your exam may vary.  To find out more about this testing  
+experience, read [Cisco's Lab exam blog](https://blogs.cisco.com/learning/new-performance-based-lab-exam-items-build-opportunities)  
 
 ---
 
