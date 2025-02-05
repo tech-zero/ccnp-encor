@@ -22,7 +22,7 @@ iosv_l3_R3 = {
 }
 
 
-with open('R3-Sol3.ios') as f:
+with open('R3-Sol4.ios') as f:
     lines = f.read().splitlines()
 print (lines)
 
@@ -32,15 +32,4 @@ for devices in all_devices:
     net_connect = ConnectHandler(**devices)
     output = net_connect.send_config_set(lines)
     print (output)
-
-
-with open('R1-Sol3.ios') as f:
-    lines = f.read().splitlines()
-print (lines)
-
-all_devices = [iosv_l3_R1]
-
-for devices in all_devices:
-    net_connect = ConnectHandler(**devices)
-    output = net_connect.send_config_set(lines)
-    print (output)
+    

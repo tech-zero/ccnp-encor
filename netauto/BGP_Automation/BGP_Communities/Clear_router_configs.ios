@@ -5,6 +5,11 @@ line con 0
  no logging synchronous
  exit
 no banner motd #
+no router bgp 300
+no router bgp 500
+no router bgp 6500
+no ip bgp-community new-format
+
 no ipv6 unicast-routing
 default interface range g0/1-3
 interface range g0/1-3
