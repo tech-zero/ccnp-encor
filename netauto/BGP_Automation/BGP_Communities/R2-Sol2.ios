@@ -1,0 +1,8 @@
+ip bgp-community new-format
+router bgp 500 
+address-family ipv4 unicast
+neighbor 10.1.2.1 send-community
+neighbor 10.2.3.3 send-community
+address-family ipv6 unicast
+neighbor 2001:db8:acad:1012::1 send-community
+neighbor 2001:db8:acad:1023::3 send-community

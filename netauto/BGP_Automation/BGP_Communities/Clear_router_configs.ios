@@ -1,0 +1,14 @@
+ip domain lookup
+hostname Router
+line con 0
+ no exec-timeout 0 0
+ no logging synchronous
+ exit
+no banner motd #
+no ipv6 unicast-routing
+default interface range g0/1-3
+interface range g0/1-3
+ shutdown
+exit
+no interface loopback 0
+no interface loopback 1

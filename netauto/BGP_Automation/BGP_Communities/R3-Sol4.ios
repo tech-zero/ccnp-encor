@@ -1,0 +1,21 @@
+ip community-list 100 permit 650:400
+ip community-list 101 permit 650:600
+
+route-map COMMCHECK_4 deny 10
+match community 100
+route-map COMMCHECK_4 permit 20
+
+route-map COMMCHECK_6 permit 10
+match community 101
+set local-preference 250
+route-map COMMCHECK_6 permit 20
+
+router bgp 300
+address-family ipv4 unicast
+neighbor 10.2.3.2 route-map COMMCHECK_4 in
+address-family ipv6 unicast
+neighbor 2001:db8:acad:1023::2 route-map COMMCHECK_6 in
+end
+
+clear bgp ipv4 unicast 500 in
+clear bgp ipv6 unicast 500 in

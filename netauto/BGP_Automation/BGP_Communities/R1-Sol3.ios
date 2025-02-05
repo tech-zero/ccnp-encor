@@ -1,0 +1,15 @@
+route-map ADDCOMM permit 10
+set community 650:400 additive
+
+route-map ADDCOMM_6 permit 10
+set community 650:600 additive
+ 
+router bgp 6500
+address-family ipv4 unicast
+neighbor 10.1.2.2 route-map ADDCOMM out
+address-family ipv6 unicast
+neighbor 2001:db8:acad:1012::2 route-map ADDCOMM_6 out
+end
+
+clear bgp ipv4 unicast 500 out
+clear bgp ipv6 unicast 500 out

@@ -1,0 +1,26 @@
+no ip domain lookup
+hostname R2
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+ exit
+banner motd # This is R2, BGP Communities Lab #
+ipv6 unicast-routing
+interface g0/1
+ ip address 10.1.2.2 255.255.255.0
+ ipv6 address fe80::2:1 link-local
+ ipv6 address 2001:db8:acad:1012::2/64
+ no shutdown
+interface g0/2
+ ip address 10.2.3.2 255.255.255.0
+ ipv6 address fe80::2:2 link-local
+ ipv6 address 2001:db8:acad:1023::2/64
+ no shutdown
+interface loopback 0
+ ip address 192.168.2.1 255.255.255.224
+ ipv6 address fe80::2:3 link-local
+ ipv6 address 2001:db8:acad:2000::1/64
+interface loopback 1
+ ip address 192.168.2.65 255.255.255.192
+ ipv6 address fe80::2:4 link-local
+ ipv6 address 2001:db8:acad:2001::1/64
